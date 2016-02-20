@@ -37,7 +37,14 @@ $(document).ready(function () {
   svg.selectAll('circle')
     .data(frequencyData)
     .enter()
-    .append('circle');
+    .append('circle')
+    .attr("cx", function(d, i) {
+      return i * 2;
+    })
+    .attr("r", 50) 
+    .attr('fill', function(d) {
+      return 'rgb(0, ' + d + ', ' + d + ')';
+    });
 
   // Continuously loop and update chart with frequency data.
   function renderChart() {
@@ -61,9 +68,9 @@ $(document).ready(function () {
 
     svg.selectAll('circle')
       .data(frequencyData)
-      .attr("cx", 50)
-      .attr("cy", 50)
-      .attr("r", 50)
+      .attr("r", function(d) {
+        return d;
+      })
       .attr('fill', function(d) {
         return 'rgb(0, ' + d + ', ' + d + ')';
       })
