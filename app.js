@@ -61,9 +61,9 @@ $(document).ready(function () {
 
     svg.selectAll('circle')
       .data(frequencyData)
-      .attr("cx", d / 10)
-      .attr("cy", d / 10)
-      .attr("r", d / 10)
+      .attr("cx", frequencyData / 10)
+      .attr("cy", frequencyData / 10)
+      .attr("r", frequencyData / 10)
       .attr('fill', function(d) {
         return 'rgb(0, ' + d + ', ' + d + ')';
       })
