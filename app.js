@@ -13,7 +13,7 @@ $(document).ready(function () {
   //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
   var frequencyData = new Uint8Array(128);
 
-  var svgHeight = '300';
+  var svgHeight = '1200';
   var svgWidth = '1200';
   var barPadding = '1';
 
@@ -39,8 +39,9 @@ $(document).ready(function () {
     .enter()
     .append('circle')
     .attr("cx", function(d, i) {
-      return i * 2;
+      return i * (svgWidth / frequencyData.length);
     })
+    .attr("cy", svgHeight - 50)
     .attr("r", 50) 
     .attr('fill', function(d) {
       return 'rgb(0, ' + d + ', ' + d + ')';
