@@ -43,9 +43,10 @@ $(document).ready(function () {
     })
     .attr("cy", 250)
     .attr("r", 50) 
-    .attr('fill', function(d) {
+    .attr('stroke', function(d) {
       return 'rgb(0, ' + d + ', ' + d + ')';
-    });
+    })
+    .attr('fill', 'none');
 
   // Continuously loop and update chart with frequency data.
   function renderChart() {
@@ -71,10 +72,11 @@ $(document).ready(function () {
       .data(frequencyData)
       .attr("r", function(d) {
         return d;
-      })
-      .attr('fill', function(d) {
+      })    
+      .attr('stroke', function(d) {
         return 'rgb(0, ' + d + ', ' + d + ')';
       })
+      .attr('fill', 'none');
   }
 
   // Run the loop
