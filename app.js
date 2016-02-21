@@ -38,9 +38,9 @@ $(document).ready(function () {
     .data(frequencyData)
     .enter()
     .append('circle')
-    .attr("cx", function(d, i) {
-      return i * (svgWidth / frequencyData.length);
-    })
+    // .attr("cx", function(d, i) {
+    //   return i * (svgWidth / frequencyData.length);
+    // })
     .attr("cy", 250)
     .attr("r", 50) 
     .attr('stroke', function(d) {
