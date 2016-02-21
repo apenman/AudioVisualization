@@ -11,7 +11,7 @@ $(document).ready(function () {
   audioSrc.connect(audioCtx.destination);
 
   //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
-  var frequencyData = new Uint8Array(4);
+  var frequencyData = new Uint8Array(128);
 
   var svgHeight = '1200';
   var svgWidth = '1200';
