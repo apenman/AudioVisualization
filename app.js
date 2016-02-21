@@ -11,7 +11,7 @@ $(document).ready(function () {
   audioSrc.connect(audioCtx.destination);
 
   //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
-  var frequencyData = new Uint8Array(128);
+  var frequencyData = new Uint8Array(4);
 
   var svgHeight = '1200';
   var svgWidth = '1200';
@@ -41,7 +41,7 @@ $(document).ready(function () {
     .attr("cx", function(d, i) {
       return i * (svgWidth / frequencyData.length);
     })
-    .attr("cy", svgHeight - 50)
+    .attr("cy", 250)
     .attr("r", 50) 
     .attr('fill', function(d) {
       return 'rgb(0, ' + d + ', ' + d + ')';
