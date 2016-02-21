@@ -41,7 +41,8 @@ $(document).ready(function () {
     // .attr("cx", function(d, i) {
     //   return i * (svgWidth / frequencyData.length);
     // })
-    .attr("cy", 250)
+    .attr("cx", 100)
+    .attr("cy", 350)
     .attr("r", 50) 
     .attr('stroke', function(d) {
       return 'rgb(0, ' + d + ', ' + d + ')';
